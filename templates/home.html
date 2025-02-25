@@ -4,30 +4,15 @@
     <title>Home</title>
     <meta name="description" content="My home page, on which I showcase my work!">
     <meta name="keywords" content="personal home page">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <div class="myDiv">
-    {% if heading %}
-        <h1>{{ heading }}</h1>
-    {% else %}
-        <h1>Home Page</h1>
-    {% endif %}
-        This is where you will put the content of this page.
-    </div>
-    </body>
+    <h1>Welcome to the Home Page</h1>
+        <p>Go to the <a href="{{ url_for('hello') }}">Hello Page</a></p>
+        <p>Press here <a href="{{ url_for('about') }}">ABOUT</a></p>
+        <p>Press here <a href="{{ url_for('home') }}">HOME</a></p>
+        <p>Press here <a href="{{ url_for('layout') }}">layout</a></p>
+        
+</body>
 
-    <head>
-        <title>Home</title>
-        <meta name="description" content="My home page, on which I showcase my work!">
-        <meta name="keywords" content="personal home page">
-    <style>
-    .myDiv {
-      border: solid darkblue 5px;
-      padding-bottom: 20px;
-      background-color: lightblue;
-      text-align: center;
-      font-family: Sans-serif;
-    }
-    </style>
-    </head>
 </html>

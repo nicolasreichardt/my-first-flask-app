@@ -1,28 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>About</title>
     <meta name="description" content="My home page, on which I showcase my work!">
     <meta name="keywords" content="personal home page">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <div class="myDiv">
-        This is where you will put the content of this page.
-    </div>
-    </body>
-
-    <head>
-        <title>Home</title>
-        <meta name="description" content="My home page, on which I showcase my work!">
-        <meta name="keywords" content="personal home page">
-    <style>
-    .myDiv {
-      border: solid darkblue 5px;
-      padding-bottom: 20px;
-      background-color: lightblue;
-      text-align: center;
-      font-family: Sans-serif;
-    }
-    </style>
-    </head>
+    <header>
+        <h1>About Me</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('layout') }}">Projects</a></li>
+                <li><a href="{{ url_for('hello') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <h2>Hello, I'm Nicolas!</h2>
+        <p>
+            Hey there! I'm glad you found my page. I'm a first-year Data Science student at the Hertie School in Berlin, currently learning Python and R — and excited to share my work along the way.
+            Outside of studies, I love traveling, staying active, and taking care of my plants. I also have a soft spot for good coffee and great food. 
+            When I'm not coding, you'll probably find me running, swimming, or at the gym.
+            Thanks for stopping by. I hope you'll enjoy my work!
+        </p>
+        <img src="{{ url_for('static', filename='images/wadirum.jpg') }}" alt="My Image" width="300">
+        <p>That's me in the Wadi Rum desert in Jordan 🇯🇴</p>
+        <p>You can find me on GitHub and LinkedIn. Alternatively, you can send me an email! Looking forward to hearing from you.</p>
+        <div class="social-links">
+            <a href="https://github.com/nicolasreichardt" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/nicolasreichardt" target="_blank">LinkedIn</a>
+            <a href="mailto:nicolasreichardt@gmail.com">Email Me</a>
+        </div>
+    </section>
+    <footer>
+        <p>© 2025 Nicolas Reichardt. All rights reserved.</p>
+    </footer>
+</body>
 </html>
